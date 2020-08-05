@@ -18,11 +18,6 @@ class Tag(models.Model):
     def __unicode__(self):
         return self.name
 
-
-class TagForm(ModelForm):
-    class Meta:
-        fields = ['name', 'status', 'pub_date']
-
 class Question(models.Model):
     STATUES = (
         ('checking', 'Checking'),
