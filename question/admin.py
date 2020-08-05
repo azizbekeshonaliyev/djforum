@@ -18,12 +18,6 @@ class TagAdmin(admin.ModelAdmin):
 admin.site.register(Tag,TagAdmin)
 
 class QuestionAdmin(admin.ModelAdmin):
-    fieldsets = [
-        ("Title", {'fields': ['title']}),
-        ("Desc", {'fields': ['desc']}),
-        ("Status",             {'fields': ['status']}),
-        ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
-    ]
     list_display = ('status','title','user')
     list_display_links = ('status','title')
     list_filter = ('status','title')
