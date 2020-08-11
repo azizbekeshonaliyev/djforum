@@ -20,7 +20,7 @@ admin.site.register(Tag,TagAdmin)
 class QuestionAdmin(admin.ModelAdmin):
     list_display = ('status','title','user')
     list_display_links = ('status','title')
-    list_filter = ('status','title')
+    list_filter = ('status','title','desc')
 
     def save_model(self, request, obj, form, change):
         if getattr(obj, 'user', None) is None:

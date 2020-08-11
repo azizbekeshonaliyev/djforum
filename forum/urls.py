@@ -47,8 +47,6 @@ router.register(r'tags', TagViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('questions/', include('question.urls')),
     path('admin/', admin.site.urls),
-    path('tinymce/', include('tinymce.urls')),
     path(r'api-auth/', include('rest_framework.urls'))
 ]
