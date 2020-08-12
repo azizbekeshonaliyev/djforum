@@ -18,7 +18,7 @@ class TagAdmin(admin.ModelAdmin):
 admin.site.register(Tag,TagAdmin)
 
 class QuestionAdmin(admin.ModelAdmin):
-    list_display = ('status','title','user')
+    list_display = ('status','title','user','pub_date')
     list_display_links = ('status','title')
     list_filter = ('status','title','desc')
 
